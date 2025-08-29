@@ -837,6 +837,7 @@
 <div class="letter-signature">
     With loads of love & friendship,<br>
     Your Friend 💕
+    HMXPANEL
 </div>
                         </div>
                     </div>
