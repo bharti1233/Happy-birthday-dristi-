@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY BIRTHDAY DRISTI 🎉</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 25%, #2d1b69 50%, #667eea 75%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+            overflow-x: hidden;
+            position: relative;
+            animation: backgroundShift 20s ease-in-out infinite;
+            transition: all 0.5s ease;
+        }
+
+        /* Light Mode Styles */
+        body.light-mode {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 25%, #dee2e6 50%, #ced4da 75%, #adb5bd 100%);
+            color: #212529;
+        }
+
+        body.light-mode .main-title {
+            background: linear-gradient(45deg, #0066cc, #0080ff, #6600cc, #cc0066);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        body.light-mode .subtitle {
+            color: rgba(33, 37, 41, 0.8);
+        }
+
+        body.light-mode .content-container {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            color: #212529;
+        }
+
+        body.light-mode .countdown-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            color: #212529;
+        }
+
+        body.light-mode .countdown-number {
+            color: #0066cc;
+            text-shadow: 0 0 25px rgba(0, 102, 204, 0.3);
+        }
+
+        body.light-mode .countdown-label {
+            color: rgba(33, 37, 41, 0.8);
+        }
+
+        body.light-mode .status-message {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            color: #212529;
+        }
+
+        body.light-mode .letter-box {
+            background: rgba(255, 255, 255, 0.95);
+            border: 3px solid rgba(0, 0, 0, 0.2);
+            color: #212529;
+        }
+
+        body.light-mode .letter-signature {
+            color: #6600cc;
+            text-shadow: 0 0 15px rgba(102, 0, 204, 0.3);
+        }
+
+
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        body.light-mode .theme-toggle {
+            background: rgba(0, 0, 0, 0.1);
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            color: #212529;
+        }
+
+        body.light-mode .theme-toggle:hover {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes backgroundShift {
+            0%, 100% { 
+                background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 25%, #2d1b69 50%, #667eea 75%, #764ba2 100%);
+            }
+            50% { 
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+            }
+        }
+
+        /* Page Container */
+        .page {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            min-height: 100vh;
+        }
+
+        .page.active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Main Container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: slideInFromTop 1s ease-out;
+        }
+
+        @keyframes slideInFromTop {
+            0% { opacity: 0; transform: translateY(-100px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .main-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #00f2fe, #4facfe, #f093fb, #f5576c);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease-in-out infinite;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1rem;
+        }
+
+        /* Content Container */
+        .content-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            animation: slideInFromBottom 1s ease-out 0.3s both;
+            position: relative;
+            overflow: hidden;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        @keyframes slideInFromBottom {
+            0% { opacity: 0; transform: translateY(100px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Countdown Styles */
+        .countdown-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .countdown-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .countdown-card:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 25px 50px rgba(102, 126, 234, 0.4);
+        }
+
+        .countdown-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #00f2fe;
+            text-shadow: 0 0 25px rgba(0, 242, 254, 0.8);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+
+
+        /* Person Page Styles */
+        .person-container {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .person-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            margin: 2rem auto;
+            box-shadow: 0 0 40px rgba(102, 126, 234, 0.5);
+            animation: personGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes personGlow {
+            0%, 100% { box-shadow: 0 0 40px rgba(102, 126, 234, 0.5); }
+            50% { box-shadow: 0 0 60px rgba(240, 147, 251, 0.8); }
+        }
+
+        /* Enhanced Cake Cutting Styles */
+        .cake-container {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .birthday-cake {
+            position: relative;
+            display: inline-block;
+            margin: 2rem 0;
+        }
+
+        .cake-base {
+            font-size: 8rem;
+            display: block;
+            filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.5));
+            transition: all 0.3s ease;
+        }
+
+        .candles {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            transition: all 0.5s ease;
+        }
+
+        .candles.blown {
+            opacity: 0.3;
+            transform: translateX(-50%) scale(0.8);
+        }
+
+        .knife {
+            position: absolute;
+            font-size: 3rem;
+            top: 50%;
+            left: -100px;
+            transform: translateY(-50%) rotate(-45deg);
+            opacity: 0;
+            transition: all 1s ease;
+        }
+
+        .knife.cutting {
+            left: 50%;
+            opacity: 1;
+            transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+        }
+
+        .cake-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .cake-button {
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            background-size: 300% 300%;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            animation: buttonGradient 3s ease-in-out infinite;
+        }
+
+        @keyframes buttonGradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .cake-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+        }
+
+        /* Wind Animation */
+        .wind-effect {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            opacity: 0;
+            animation: windBlow 2s ease-out;
+        }
+
+        @keyframes windBlow {
+            0% { opacity: 0; transform: translateX(-50%) translateY(0); }
+            50% { opacity: 1; transform: translateX(-50%) translateY(-20px); }
+            100% { opacity: 0; transform: translateX(-50%) translateY(-40px); }
+        }
+
+        /* Letter Page Styles */
+        .letter-container {
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .letter-box {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 4rem 3rem;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+        }
+
+        .letter-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(240, 147, 251, 0.1));
+            border-radius: 25px;
+            z-index: -1;
+        }
+
+        .letter-content {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: left;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: none;
+        }
+
+        .letter-content h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .letter-content p {
+            margin-bottom: 2rem;
+            text-align: justify;
+            font-weight: 400;
+        }
+
+        .letter-signature {
+            margin-top: 2rem;
+            font-size: 1.3rem;
+            color: #f093fb;
+            text-shadow: 0 0 15px rgba(240, 147, 251, 0.5);
+        }
+
+        /* Status Message */
+        .status-message {
+            font-size: 1.2rem;
+            margin: 1.5rem 0;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        /* Next Page Button */
+        .next-button {
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            background-size: 300% 300%;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.3rem;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+            animation: buttonGradient 3s ease-in-out infinite;
+            margin: 2rem 0;
+        }
+
+        .next-button:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.6);
+        }
+
+        .next-button.locked {
+            background: linear-gradient(135deg, #666, #888);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .next-button.locked:hover {
+            transform: none;
+            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Instagram Button */
+        .instagram-button {
+            background: linear-gradient(135deg, #E4405F, #F56040, #FCAF45);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 25px rgba(228, 64, 95, 0.4);
+            margin-top: 2rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .instagram-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(228, 64, 95, 0.6);
+        }
+
+        /* Firework Animation */
+        .firework {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            animation: fireworkExplode 2s ease-out forwards;
+        }
+
+        @keyframes fireworkExplode {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        /* Particle Effects */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        .particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #00f2fe;
+            border-radius: 50%;
+            animation: particleFloat 5s linear infinite;
+            box-shadow: 0 0 8px rgba(0, 242, 254, 0.8);
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .countdown-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .countdown-number {
+                font-size: 2rem;
+            }
+            
+            .content-container {
+                padding: 1.5rem;
+            }
+            
+            .cake-base {
+                font-size: 5rem;
+            }
+            
+            .person-photo {
+                width: 120px;
+                height: 120px;
+                font-size: 2.5rem;
+            }
+            
+
+            
+            .cake-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cake-button {
+                width: 200px;
+            }
+            
+            .letter-container {
+                padding: 1rem;
+                max-width: 100%;
+            }
+            
+            .letter-box {
+                padding: 2rem 1.5rem;
+                min-height: auto;
+            }
+            
+            .letter-content {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+            
+            .letter-content h2 {
+                font-size: 1.8rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .letter-signature {
+                font-size: 1.1rem;
+                margin-top: 1.5rem;
+            }
+            
+            .theme-toggle {
+                top: 15px;
+                right: 15px;
+                padding: 10px 15px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 1.8rem;
+            }
+            
+            .countdown-number {
+                font-size: 1.5rem;
+            }
+            
+            .cake-base {
+                font-size: 4rem;
+            }
+            
+
+            
+            .letter-content {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+            
+            .letter-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .letter-signature {
+                font-size: 1rem;
+            }
+            
+            .letter-box {
+                padding: 1.5rem 1rem;
+            }
+            
+            .theme-toggle {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <span id="theme-icon">🌙</span>
+        <span id="theme-text">Dark</span>
+    </button>
+
+    <!-- Page 1: Countdown -->
+    <div class="page active" id="countdown-page">
+        <div class="container">
+            <div class="header">
+                <h1 class="main-title">🎉 BIRTHDAY COUNTDOWN 🎉</h1>
+                <p class="subtitle">✨ A Queen’s special day is on the way… Let’s countdown to the magical moment when we celebrate YOU, Dristi! ✨</p>
+                <div style="font-family: 'Orbitron', monospace; font-size: 1.2rem; color: #00f2fe;">August 29, 2025</div>
+            </div>
+
+            <div class="content-container">
+                <div class="countdown-grid">
+                    <div class="countdown-card">
+                        <span class="countdown-number" id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-card">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-card">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-card">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+                
+                <div class="status-message" id="statusMessage">
+                    The anticipation is building... 🎈
+                </div>
+                
+                <button class="next-button locked" id="countdownNextButton" onclick="tryNextFromCountdown()">
+                    🔒 Wait for Birthday! →
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Page 3: Birthday Star -->
+    <div class="page" id="birthday-star-page">
+        <div class="container">
+            <div class="header">
+                <h1 class="main-title">⭐ BIRTHDAY STAR ⭐</h1>
+                <p class="subtitle">Celebrating the amazing person!</p>
+            </div>
+
+            <div class="content-container">
+                <div class="person-container">
+                    <h2 style="font-size: 2.2rem; margin-bottom: 2rem; color: #00f2fe;">🌟 A Queen Deserves Her Day to Sparkle! 🌟</h2>
+                    <div class="person-photo" id="personPhoto">👤</div>
+                    
+
+                    
+                    <div class="status-message" id="personMessage">
+                        🌸 Happy Birthday, beautiful soul! 💕 Today the universe shines brighter because it’s YOUR day. You’re not just the star, you’re the whole sky filled with love, laughter, and light! 🌸
+                    </div>
+                    
+                    <button class="cake-button" onclick="celebratePerson()">
+                        ✨ Shine Bright! ✨
+                    </button>
+                </div>
+                
+                <button class="next-button" onclick="nextPage()">
+                    🎂 Next: Cake Cutting →
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Cake Cutting -->
+    <div class="page" id="cake-cutting-page">
+        <div class="container">
+            <div class="header">
+                <h1 class="main-title">🎂 CAKE CUTTING 🎂</h1>
+                <p class="subtitle">Cut the Cake, Sparkle the Day!</p>
+            </div>
+
+            <div class="content-container">
+                <div class="cake-container">
+                    <h2 style="font-size: 2.2rem; margin-bottom: 2rem; color: #f093fb;">🎂 Make a Wish! 🎂</h2>
+                    
+                    <div class="birthday-cake">
+                        <div class="candles" id="candles">🕯️🕯️🕯️</div>
+                        <div class="cake-base" id="cakeBase">🎂</div>
+                        <div class="knife" id="knife">🔪</div>
+                    </div>
+                    
+                    <div class="cake-buttons">
+                        <button class="cake-button" onclick="blowCandles()">
+                            💨 Blow Candles
+                        </button>
+                        <button class="cake-button" onclick="cutCake()">
+                            🔪 Cut Cake
+                        </button>
+                        <button class="cake-button" onclick="celebrate()">
+                            🎉 Celebrate
+                        </button>
+                    </div>
+                    
+                    <div class="status-message" id="cakeMessage">
+                        🎂 Blow the candles, cut the cake, and let the sweetness of this moment stay with you forever! May every slice bring happiness, success, and endless love into your life. 💖 🎂
+                    </div>
+                </div>
+                
+                <button class="next-button" onclick="nextPage()">
+                    💌 Next: Birthday Letter →
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 5: Birthday Letter -->
+    <div class="page" id="birthday-letter-page">
+        <div class="container">
+            <div class="header">
+                <h1 class="main-title">💌 BIRTHDAY LETTER 💌</h1>
+                <p class="subtitle">💌 A letter filled with love, joy, and wishes written only for YOU. 🌹</p>
+            </div>
+
+            <div class="content-container">
+                <div class="letter-container">
+                    <div class="letter-box">
+                        <div class="letter-content">
+                            <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: #f093fb;">💌 To My Amazing Friend Dristi 💌</h2>
+
+<p>Happy Birthday, bestie! 🎉 Today is all about celebrating YOU – the laughter you bring, the craziness we share, and the countless memories that make our friendship so special. 💕</p>
+
+<p>From silly jokes to endless talks, you’ve been a constant source of happiness in my life. 🌸 Thank you for always being the kind, caring, and wonderful person that you are.</p>
+
+<p>On this special day, I wish you loads of happiness, unlimited cake, and all the success your heart desires. 🎂✨</p>
+
+<p>May this year bring you new adventures, exciting opportunities, and moments that you’ll never forget. Because honestly, you deserve nothing less than the absolute best. 🌟</p>
+
+<p>Keep shining, keep smiling, and never forget that your friends will always be here to cheer you on. 💖</p>
+
+<div class="letter-signature">
+    With loads of love & friendship,<br>
+    Your Friend 💕
+</div>
+                        </div>
+                    </div>
+                    
+                    <button class="cake-button" onclick="celebrateLetter()" style="margin: 2rem 0;">
+                        ✨ Send Love & Wishes! ✨
+                    </button>
+                </div>
+                
+                <a href="https://www.instagram.com/reel/DK6sJGYxDT_/?igsh=OGdsbnIxMXo5OGZz" target="_blank" class="instagram-button">
+                    Special Gift for You 💖
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Particles Container -->
+    <div class="particles" id="particles"></div>
+
+    <script>
+        let countdownInterval;
+        let currentPage = 0;
+        const pages = ['countdown', 'birthday-star', 'cake-cutting', 'birthday-letter'];
+        
+        // Set birthday date to September 19th, 2025
+        const birthdayDate = new Date('2025-08-28T00:00:00');
+
+        // Next page navigation
+        function nextPage() {
+            currentPage = (currentPage + 1) % pages.length;
+            showPageDirect(pages[currentPage]);
+        }
+
+        // Direct page navigation
+        function showPageDirect(pageId) {
+            // Hide all pages
+            const pageElements = document.querySelectorAll('.page');
+            pageElements.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            const targetPage = document.getElementById(pageId + '-page');
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+            
+            // Initialize page-specific content
+            if (pageId === 'birthday-star') {
+                showBirthdayImage();
+            }
+            
+            // Create particles for page transition
+            createParticles();
+        }
+
+        // Countdown functionality
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = birthdayDate.getTime() - now;
+            
+            if (distance < 0) {
+                document.getElementById('statusMessage').innerHTML = '🎉 HAPPY BIRTHDAY! The special day is here! 🎉';
+                
+                // Unlock the next button
+                const nextButton = document.getElementById('countdownNextButton');
+                nextButton.classList.remove('locked');
+                nextButton.innerHTML = '⭐ Next: Birthday Star →';
+                nextButton.onclick = nextPage;
+                
+                clearInterval(countdownInterval);
+                createParticles();
+                createParticles();
+                return;
+            }
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            
+            // Update status message
+            const statusMessage = document.getElementById('statusMessage');
+            if (days > 30) {
+                statusMessage.innerHTML = `🌟 ${days} days until the magical celebration begins! 🌟`;
+            } else if (days > 7) {
+                statusMessage.innerHTML = `🎊 Less than a month to go! ${days} days remaining! 🎊`;
+            } else if (days > 1) {
+                statusMessage.innerHTML = `⚡ Final countdown! Only ${days} days left! ⚡`;
+            } else if (days === 1) {
+                statusMessage.innerHTML = `🚀 Tomorrow is the big day! Get ready! 🚀`;
+            } else if (hours > 1) {
+                statusMessage.innerHTML = `⏰ Less than 24 hours! ${hours} hours to go! ⏰`;
+            } else {
+                statusMessage.innerHTML = `🎯 Final hour! The celebration is almost here! 🎯`;
+            }
+        }
+
+
+
+        function tryNextFromCountdown() {
+            const now = new Date().getTime();
+            const distance = birthdayDate.getTime() - now;
+            
+            if (distance < 0) {
+                nextPage();
+            } else {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                
+                if (days > 0) {
+                    alert(`🎂 The birthday celebration will unlock in ${days} days and ${hours} hours! Please wait for the special day! 🎉`);
+                } else if (hours > 0) {
+                    alert(`🎂 The birthday celebration will unlock in ${hours} hours! Almost there! 🎉`);
+                } else {
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    alert(`🎂 The birthday celebration will unlock in ${minutes} minutes! So close! 🎉`);
+                }
+            }
+        }
+
+        // Enhanced Cake functionality
+        function blowCandles() {
+            const candles = document.getElementById('candles');
+            const cakeContainer = document.querySelector('.cake-container');
+            const message = document.getElementById('cakeMessage');
+            
+            // Add wind effect
+            const wind = document.createElement('div');
+            wind.className = 'wind-effect';
+            wind.textContent = '💨💨💨';
+            cakeContainer.appendChild(wind);
+            
+            // Blow out candles
+            setTimeout(() => {
+                candles.classList.add('blown');
+                message.innerHTML = '🎉 Perfect! You blew out the candles! Your wish will come true! 🌟';
+            }, 500);
+            
+            // Remove wind effect
+            setTimeout(() => {
+                wind.remove();
+            }, 2000);
+            
+            createParticles();
+        }
+
+        function cutCake() {
+            const knife = document.getElementById('knife');
+            const cakeBase = document.getElementById('cakeBase');
+            const message = document.getElementById('cakeMessage');
+            
+            // Show knife cutting animation
+            knife.classList.add('cutting');
+            
+            setTimeout(() => {
+                cakeBase.textContent = '🍰';
+                message.innerHTML = '🔪 Excellent! You cut the cake perfectly! Time to enjoy! 🍰';
+                knife.classList.remove('cutting');
+            }, 1000);
+            
+            createParticles();
+            createParticles();
+        }
+
+        function celebrate() {
+            const cakeContainer = document.querySelector('.cake-container');
+            const message = document.getElementById('cakeMessage');
+            
+            // Create fireworks
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const firework = document.createElement('div');
+                    firework.className = 'firework';
+                    firework.style.left = Math.random() * 100 + '%';
+                    firework.style.top = Math.random() * 100 + '%';
+                    firework.style.backgroundColor = ['#ff4444', '#44ff44', '#4444ff', '#ffff44', '#ff44ff', '#44ffff'][Math.floor(Math.random() * 6)];
+                    
+                    cakeContainer.appendChild(firework);
+                    
+                    setTimeout(() => {
+                        firework.remove();
+                    }, 2000);
+                }, i * 100);
+            }
+            
+            message.innerHTML = '🎉 🎉 Amazing celebration Happy Birthday, Dristi! 🎂✨';
+            
+            createParticles();
+            createParticles();
+            createParticles();
+        }
+
+        const birthdayImageUrl = 'https://i.supaimg.com/3c6ca851-1689-4e6a-a7aa-6c30931afd1a.jpg';
+
+
+
+        function showBirthdayImage() {
+            const personPhoto = document.getElementById('personPhoto');
+            
+            // Clear existing content
+            personPhoto.innerHTML = '';
+            
+            // Create image element
+            const img = document.createElement('img');
+            img.src = birthdayImageUrl;
+            img.alt = 'Birthday Star Photo';
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img.style.objectFit = 'cover';
+            img.style.borderRadius = '50%';
+            img.style.transition = 'all 0.3s ease';
+            
+            // Add error handling
+            img.onerror = function() {
+                this.style.display = 'none';
+                personPhoto.innerHTML = '📷';
+                personPhoto.style.fontSize = '4rem';
+                personPhoto.style.display = 'flex';
+                personPhoto.style.alignItems = 'center';
+                personPhoto.style.justifyContent = 'center';
+                alert('📷 Image could not be loaded. Please check the image URL.');
+            };
+            
+            img.onload = function() {
+                createParticles();
+                createParticles();
+            };
+            
+            personPhoto.appendChild(img);
+        }
+
+        function celebratePerson() {
+            createParticles();
+            createParticles();
+            createParticles();
+            
+            alert('🌟 You are absolutely amazing! Today we celebrate the wonderful person you are! Keep shining bright! ✨');
+        }
+
+        function celebrateLetter() {
+            createParticles();
+            createParticles();
+            createParticles();
+            
+            alert('💌 Your birthday wishes have been sent with love! May this special day bring you endless joy and happiness! 💕');
+        }
+
+        // Particle effects
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const colors = ['#00f2fe', '#4facfe', '#f093fb', '#f5576c', '#FFD700', '#FF6347'];
+            
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    particle.style.animationDelay = Math.random() * 2 + 's';
+                    particle.style.animationDuration = (Math.random() * 2 + 3) + 's';
+                    
+                    particlesContainer.appendChild(particle);
+                    
+                    setTimeout(() => {
+                        particle.remove();
+                    }, 5000);
+                }, i * 30);
+            }
+        }
+
+        // Theme Toggle functionality
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+            
+            body.classList.toggle('light-mode');
+            
+            if (body.classList.contains('light-mode')) {
+                themeIcon.textContent = '☀️';
+                themeText.textContent = 'Light';
+                localStorage.setItem('theme', 'light');
+            } else {
+                themeIcon.textContent = '🌙';
+                themeText.textContent = 'Dark';
+                localStorage.setItem('theme', 'dark');
+            }
+            
+            createParticles();
+        }
+
+        // Load saved theme
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+            
+            if (savedTheme === 'light') {
+                body.classList.add('light-mode');
+                themeIcon.textContent = '☀️';
+                themeText.textContent = 'Light';
+            } else {
+                themeIcon.textContent = '🌙';
+                themeText.textContent = 'Dark';
+            }
+        }
+
+        // Initialize
+        window.addEventListener('load', function() {
+            loadTheme();
+            updateCountdown();
+            countdownInterval = setInterval(updateCountdown, 1000);
+            
+            // Create initial particles
+            setTimeout(createParticles, 1500);
+            setInterval(createParticles, 10000);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'976bd695478dde58',t:'MTc1NjQ2ODMwNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
